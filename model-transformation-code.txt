@@ -1,4 +1,4 @@
-Do it on Tensorflow 1.9
+Do it on Tensorflow 1.10
 
 1. Convert the model to frozen.pb
 freeze_graph   --input_graph=./model5/graph.pbtxt   --input_checkpoint=./model5/model.ckpt-1950   --input_binary=false   --output_graph=/tmp/frozen.pb   --output_node_names=input_tensor,output_pred
