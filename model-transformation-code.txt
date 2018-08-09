@@ -9,5 +9,13 @@ tflite_convert --graph_def_file=/tmp/frozen.pb --input_format=TENSORFLOW_GRAPHDE
 
 
 
-Coomment out the line Number 
+In ourder run the model on mobile tflite demo app for inception
 
+1. Uncomment the line 17
+	#image = tf.reshape(image, shape=[224, 224, 3])
+  
+2. Comment line 73 and 74, as tflite do not support Dropouts
+	net = tf.layers.dropout(net, rate=0.5, noise_shape=None, 
+  seed=None, training=(mode == tf.estimator.ModeKeys.TRAIN))
+
+Ref Video https://www.youtube.com/watch?v=ICY4Lvhyobk&t=432s
